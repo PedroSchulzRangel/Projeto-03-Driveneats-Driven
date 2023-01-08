@@ -17,6 +17,9 @@ function selecionarPrato(pratoClicado){
     
     pratoSelecionado = pratoClicado;
 
+    if(pratoSelecionado !== undefined && bebidaSelecionada !== undefined && sobremesaSelecionada !== undefined){
+        habilitarBotaoDeFinalizarPedido();
+    }
 }
 function selecionarBebida(bebidaClicada){
     /*1) Buscar e selecionar o elemento div dentro do container de bebidas que contenha a classe .selecionado;
@@ -32,6 +35,10 @@ function selecionarBebida(bebidaClicada){
       bebidaClicada.classList.add("selecionado");
       
       bebidaSelecionada = bebidaClicada;
+      
+      if(pratoSelecionado !== undefined && bebidaSelecionada !== undefined && sobremesaSelecionada !== undefined){
+        habilitarBotaoDeFinalizarPedido();
+    }
   
 }
 function selecionarsobremesa(sobremesaClicada){
@@ -48,5 +55,16 @@ function selecionarsobremesa(sobremesaClicada){
       sobremesaClicada.classList.add("selecionado");
       
       sobremesaSelecionada = sobremesaClicada;
+
+      if(pratoSelecionado !== undefined && bebidaSelecionada !== undefined && sobremesaSelecionada !== undefined){
+        habilitarBotaoDeFinalizarPedido();
+    }
   
+}
+function habilitarBotaoDeFinalizarPedido(){
+
+        const botao = document.querySelector(".botao-finalizar-pedido");
+        botao.disabled = false;
+        botao.classList.add("botaoSelecionado");
+        botao.innerHTML = "Fechar pedido";
 }
