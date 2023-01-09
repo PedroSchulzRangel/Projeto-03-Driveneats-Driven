@@ -1,3 +1,6 @@
+/*O código escrito como comentário neste arquivo css remove o scroll horizontal de cada container de produtos. 
+Deixei o referido código como comentário pois o projeto pede para manter a funcionalidade do scroll, 
+e este código comentado remove a sua funcionalidade*/
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
