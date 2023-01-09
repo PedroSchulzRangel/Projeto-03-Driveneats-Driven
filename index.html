@@ -25,21 +25,21 @@
                         <img class="img-produto" src="./imagens/frango_yin_yang.png">
                         <h3 data-test="item-name">Frango Yin Yang</h3>
                         <p>Um pouco de batata, um pouco de salada</p>
-                        <span data-test="item-price">R$ 14,90</span>
+                        <span data-test="item-price">R$ <span class="preco">14,90</span><span>
                         <img class="img-check" src="./imagens/green-check.jpg">
                     </div>
                     <div data-test="dish" class="produto" onclick="selecionarPrato(this)">
                         <img class="img-produto" src="./imagens/Carne-Yin-Yang.jpg">
                         <h3 data-test="item-name">Carne Yin Yang</h3>
                         <p>Um pouco de batata, um pouco de salada</p>
-                        <span data-test="item-price">R$ 34,90</span>
+                        <span data-test="item-price">R$ <span class="preco">34,90</span></span>
                         <img class="img-check" src="./imagens/green-check.jpg">
                     </div>
                     <div data-test="dish" class="produto" onclick="selecionarPrato(this)">
                         <img class="img-produto" src="./imagens/Peixe-Yin-Yang.jpg">
                         <h3 data-test="item-name">Peixe Yin Yang</h3>
                         <p>Um pouco de batata, um pouco de salada</p>
-                        <span data-test="item-price">R$ 24,90</span>
+                        <span data-test="item-price">R$ <span class="preco">24,90</span></span>
                         <img class="img-check" src="./imagens/green-check.jpg">
                     </div>
                 </div>
@@ -53,21 +53,21 @@
                         <img class="img-produto" src="./imagens/coca-cola.png">
                         <h3 data-test="item-name">Coquinha gelada</h3>
                         <p>Lata 350ml</p>
-                        <span data-test="item-price">R$ 4,90</span>
+                        <span data-test="item-price">R$ <span class="preco">4,90</span></span>
                         <img class="img-check" src="./imagens/green-check.jpg">
                     </div>
                     <div data-test="drink" class="produto" onclick="selecionarBebida(this)">
                         <img class="img-produto" src="./imagens/sufresh-nectar-laranja-lata-330ml.jpg">
                         <h3 data-test="item-name">Sufresh nectar de laranja</h3>
                         <p>Lata 330ml</p>
-                        <span data-test="item-price">R$ 3,90</span>
+                        <span data-test="item-price">R$ <span class="preco">3,90</span></span>
                         <img class="img-check" src="./imagens/green-check.jpg">
                     </div>
                     <div data-test="drink" class="produto" onclick="selecionarBebida(this)">
                         <img class="img-produto" src="./imagens/agua-mineral-sem-gas.jpeg">
                         <h3 data-test="item-name">Água mineral sem gás</h3>
                         <p>copo 200ml</p>
-                        <span data-test="item-price">R$ 2,90</span>
+                        <span data-test="item-price">R$ <span class="preco">2,90</span></span>
                         <img class="img-check" src="./imagens/green-check.jpg">
                     </div>
                 </div>
@@ -81,28 +81,28 @@
                         <img class="img-produto" src="./imagens/pudim.png">
                         <h3 data-test="item-name">Pudim</h3>
                         <p>Apenas pudim</p>
-                        <span data-test="item-price">R$ 7,90</span>
+                        <span data-test="item-price">R$ <span class="preco">7,90</span></span>
                         <img class="img-check" src="./imagens/green-check.jpg">
                     </div>
                     <div data-test="dessert" class="produto" onclick="selecionarsobremesa(this)">
                         <img class="img-produto" src="./imagens/sorvete-de-creme.webp">
                         <h3 data-test="item-name">Sorvete de creme</h3>
                         <p>Apenas sorvete</p>
-                        <span data-test="item-price">R$ 8,90</span>
+                        <span data-test="item-price">R$ <span class="preco">8,90</span></span>
                         <img class="img-check" src="./imagens/green-check.jpg">
                     </div>
                     <div data-test="dessert" class="produto" onclick="selecionarsobremesa(this)">
                         <img class="img-produto" src="./imagens/brownie.jpeg">
                         <h3 data-test="item-name">Brownie</h3>
                         <p>Apenas brownie</p>
-                        <span data-test="item-price">R$ 10,90</span>
+                        <span data-test="item-price">R$ <span class="preco">10,90</span></span>
                         <img class="img-check" src="./imagens/green-check.jpg">
                     </div>
                 </div>
             </section>   
         </main>
         <footer>
-            <button class="botao-finalizar-pedido" data-test="order-btn" disabled>Selecione os 3 itens para fechar o pedido</button>
+            <a href="#" target="_blank" id="link-WhatsApp"><button class="botao-finalizar-pedido" data-test="order-btn" disabled onclick="enviarPedido()">Selecione os 3 itens para fechar o pedido</button></a>
         </footer>
         <script src="script.js"></script>
     </body>

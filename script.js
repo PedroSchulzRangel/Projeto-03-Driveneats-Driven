@@ -6,38 +6,41 @@ function selecionarPrato(pratoClicado){
     /*1) Buscar e selecionar o elemento div dentro do container de pratos que contenha a classe .selecionado;
       2) Verificar se o elemento selecionado é diferente de nulo e se for, remover a classe .selecionado
       3) Adicionar a classe .selecionado ao elemento clicado
-      4) Atualizar o valor da variável pratoSelecionado*/
+      4) Atualizar o valor da variável pratoSelecionado
+      5) Verificar se as variáveis pratoSelecionado, bebidaSelecionada e sobremesaSelecionada estáo vazias. Se não estiverem, chamar a função habilitarBotãoDeFinalizarPedido.*/
+      
 
-    const pratoSelecionadoAnteriormente = document.querySelector(".container-pratos .selecionado");
+    /*1)*/const pratoSelecionadoAnteriormente = document.querySelector(".container-pratos .selecionado");
 
-    if(pratoSelecionadoAnteriormente !== null){
-        pratoSelecionadoAnteriormente.classList.remove("selecionado");
+    /*2)*/if(pratoSelecionadoAnteriormente !== null){
+        /*2)*/pratoSelecionadoAnteriormente.classList.remove("selecionado");
     }
-    pratoClicado.classList.add("selecionado");
+     /*3)*/pratoClicado.classList.add("selecionado");
     
-    pratoSelecionado = pratoClicado;
+     /*4)*/ pratoSelecionado = pratoClicado;
 
-    if(pratoSelecionado !== undefined && bebidaSelecionada !== undefined && sobremesaSelecionada !== undefined){
-        habilitarBotaoDeFinalizarPedido();
+    /*5)*/if(pratoSelecionado !== undefined && bebidaSelecionada !== undefined && sobremesaSelecionada !== undefined){
+       /*5)*/habilitarBotaoDeFinalizarPedido();
     }
 }
 function selecionarBebida(bebidaClicada){
     /*1) Buscar e selecionar o elemento div dentro do container de bebidas que contenha a classe .selecionado;
       2) Verificar se o elemento selecionado é diferente de nulo e se for, remover a classe .selecionado
       3) Adicionar a classe .selecionado ao elemento clicado
-      4) Atualizar o valor da variável bebidaSelecionada*/
+      4) Atualizar o valor da variável bebidaSelecionada
+      5) Verificar se as variáveis pratoSelecionado, bebidaSelecionada e sobremesaSelecionada estáo vazias. Se não estiverem, chamar a função habilitarBotãoDeFinalizarPedido.*/
 
-      const bebidaSelecionadaAnteriormente = document.querySelector(".container-bebidas .selecionado");
+      /*1)*/const bebidaSelecionadaAnteriormente = document.querySelector(".container-bebidas .selecionado");
 
-      if(bebidaSelecionadaAnteriormente !== null){
-          bebidaSelecionadaAnteriormente.classList.remove("selecionado");
+     /*2)*/if(bebidaSelecionadaAnteriormente !== null){
+          /*2)*/bebidaSelecionadaAnteriormente.classList.remove("selecionado");
       }
-      bebidaClicada.classList.add("selecionado");
+     /*3)*/bebidaClicada.classList.add("selecionado");
       
-      bebidaSelecionada = bebidaClicada;
+     /*4)*/ bebidaSelecionada = bebidaClicada;
       
-      if(pratoSelecionado !== undefined && bebidaSelecionada !== undefined && sobremesaSelecionada !== undefined){
-        habilitarBotaoDeFinalizarPedido();
+      /*5)*/if(pratoSelecionado !== undefined && bebidaSelecionada !== undefined && sobremesaSelecionada !== undefined){
+        /*5)*/habilitarBotaoDeFinalizarPedido();
     }
   
 }
@@ -45,26 +48,54 @@ function selecionarsobremesa(sobremesaClicada){
     /*1) Buscar e selecionar o elemento div dentro do container de sobremesas que contenha a classe .selecionado;
       2) Verificar se o elemento selecionado é diferente de nulo e se for, remover a classe .selecionado
       3) Adicionar a classe .selecionado ao elemento clicado
-      4) Atualizar o valor da variável sobremesaSelecionada*/
+      4) Atualizar o valor da variável sobremesaSelecionada
+      5) Verificar se as variáveis pratoSelecionado, bebidaSelecionada e sobremesaSelecionada estáo vazias. Se não estiverem, chamar a função habilitarBotãoDeFinalizarPedido.*/
 
-      const sobremesaSelecionadaAnteriormente = document.querySelector(".container-sobremesas .selecionado");
+      /*1)*/const sobremesaSelecionadaAnteriormente = document.querySelector(".container-sobremesas .selecionado");
 
-      if(sobremesaSelecionadaAnteriormente !== null){
-          sobremesaSelecionadaAnteriormente.classList.remove("selecionado");
+      /*2)*/if(sobremesaSelecionadaAnteriormente !== null){
+          /*2)*/sobremesaSelecionadaAnteriormente.classList.remove("selecionado");
       }
-      sobremesaClicada.classList.add("selecionado");
+      /*3)*/sobremesaClicada.classList.add("selecionado");
       
-      sobremesaSelecionada = sobremesaClicada;
+      /*4)*/sobremesaSelecionada = sobremesaClicada;
 
-      if(pratoSelecionado !== undefined && bebidaSelecionada !== undefined && sobremesaSelecionada !== undefined){
-        habilitarBotaoDeFinalizarPedido();
+      /*5)*/if(pratoSelecionado !== undefined && bebidaSelecionada !== undefined && sobremesaSelecionada !== undefined){
+        /*5)*/habilitarBotaoDeFinalizarPedido();
     }
   
 }
 function habilitarBotaoDeFinalizarPedido(){
+    /*  1) Buscar e selecionar o elemento com a classe .botao-finalizar-pedido
+        2) Tornar o valor do atributo disabled falso
+        3) Adicionar a classe botaoSelecionado ao botão
+        4) Trocar o valor do innerHTML da variável botão*/
 
-        const botao = document.querySelector(".botao-finalizar-pedido");
-        botao.disabled = false;
-        botao.classList.add("botaoSelecionado");
-        botao.innerHTML = "Fechar pedido";
+        /*1)*/const botao = document.querySelector(".botao-finalizar-pedido");
+        /*2)*/botao.disabled = false;
+        /*3)*/botao.classList.add("botaoSelecionado");
+        /*4)*/botao.innerHTML = "Fechar pedido";
+}
+function enviarPedido(){
+    /*  1) Criar variavel com o número de telefone WhatsApp;
+        2) Buscar e selecionar o nome do prato, bebida e sobremesa selecionados e guardar em variáveis;
+        3) Buscar e selecionar os preços do prato, bebida e sobremesa e somá-los, guardando o valor da soma em uma variável;  
+        4) Buscar e selecionar o elemento link pelo seu id;
+        5) Alterar a propriedade href com o link desejado.*/
+    
+    /*1)*/const telefone = "5521999999999";
+    /*2)*/const nomeDoPrato = pratoSelecionado.querySelector(".produto h3").innerHTML;
+    /*2)*/const nomeDaBebida = bebidaSelecionada.querySelector(".produto h3").innerHTML;
+    /*2)*/const nomeDaSobremesa = sobremesaSelecionada.querySelector(".produto h3").innerHTML;
+    /*3)*/const precoDoPrato = Number(pratoSelecionado.querySelector(".preco").innerHTML.replace(",","."));
+    /*3)*/const precoDaBebida = Number(bebidaSelecionada.querySelector(".preco").innerHTML.replace(",","."));
+    /*3)*/const precoDaSobremesa = Number(sobremesaSelecionada.querySelector(".preco").innerHTML.replace(",","."));
+    /*3)*/const soma = precoDoPrato + precoDaBebida + precoDaSobremesa;
+    /*3)*/const somastr = soma.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+          const mensagem = "Olá, gostaria de fazer o pedido:"+"\n"+"- Prato: "+nomeDoPrato+"\n"+"- Bebida: "+nomeDaBebida+"\n"+"- Sobremesa: "+nomeDaSobremesa+"\n"+"Total: "+somastr;    
+          const mensagemFormatoWhatsApp = encodeURIComponent(mensagem);
+
+    /*4) e 5)*/document.querySelector("#link-WhatsApp").href = `https://wa.me/${telefone}?text=${mensagemFormatoWhatsApp}`;
+
+
 }
