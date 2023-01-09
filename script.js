@@ -43,7 +43,7 @@ function selecionarsobremesa(sobremesaClicada){
       /*2)*/if(sobremesaSelecionadaAnteriormente !== null){
           /*2)*/sobremesaSelecionadaAnteriormente.classList.remove("selecionado");
       }
-      /*3)*/sobremesaClicada.classList.add("selecionado");      
+      /*3)*/sobremesaClicada.classList.add("selecionado");   
       /*4)*/sobremesaSelecionada = sobremesaClicada;
       /*5)*/if(pratoSelecionado !== undefined && bebidaSelecionada !== undefined && sobremesaSelecionada !== undefined){
         /*5)*/habilitarBotaoDeFinalizarPedido();
@@ -62,7 +62,7 @@ function habilitarBotaoDeFinalizarPedido(){
 function enviarPedido(){
     /*  1) Criar variavel com o número de telefone WhatsApp;
         2) Buscar e selecionar o nome do prato, bebida e sobremesa selecionados e guardar em variáveis;
-        3) Buscar e selecionar os preços do prato, bebida e sobremesa e somá-los, guardando o valor da soma em uma variável;  
+        3) Buscar e selecionar os preços do prato, bebida e sobremesa e somá-los, guardando o valor da soma em uma variável;
         4) Buscar e selecionar o elemento link pelo seu id;
         5) Alterar a propriedade href com o link desejado.*/
     /*1)*/const telefone = "5521999999999";
@@ -76,7 +76,9 @@ function enviarPedido(){
     /*3)*/const precoDaSobremesa = Number(sobremesaSelecionada.querySelector(seletorPreco).innerHTML.replace(",","."));
     /*3)*/const soma = precoDoPrato + precoDaBebida + precoDaSobremesa;
     /*3)*/const somastr = soma.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-          const mensagem = "Olá, gostaria de fazer o pedido:"+"\n"+"- Prato: "+nomeDoPrato+"\n"+"- Bebida: "+nomeDaBebida+"\n"+"- Sobremesa: "+nomeDaSobremesa+"\n"+"Total: "+somastr;    
+          const mensagem =
+          "Olá, gostaria de fazer o pedido:"+"\n"+"- Prato: "+nomeDoPrato+"\n"+
+          "- Bebida: "+nomeDaBebida+"\n"+"- Sobremesa: "+nomeDaSobremesa+"\n"+"Total: "+somastr;    
           const mensagemFormatoWhatsApp = encodeURIComponent(mensagem);
     /*4) e 5)*/document.querySelector("#link-WhatsApp").href = `https://wa.me/${telefone}?text=${mensagemFormatoWhatsApp}`;
 }
